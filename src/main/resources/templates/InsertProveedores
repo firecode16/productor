@@ -1,0 +1,2 @@
+INSERT INTO public.proveedor(nombre, detalle, rfc, telefono, id)
+VALUES ('HP Corp', 'Empresa del comercio electronico', 'RFCHPHGFT', 81185869, 211109);

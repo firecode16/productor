@@ -1,0 +1,21 @@
+
+Call RESAPI
+
+Save
+
+http://localhost:8080/api/insertProdcut
+
+
+{
+    "id":211109,
+    "nombre":"Laptod gamer hp",
+    "detalle":"Es una laptop ultra",
+    "codigo":9994547,
+    "precio":17900,
+    "proveedor":"HP Corp EU"
+}
+
+
+Get
+
+http://localhost:8080/api/getProveedor/211109

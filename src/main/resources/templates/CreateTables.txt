@@ -1,0 +1,45 @@
+-- Table: public.producto
+
+-- DROP TABLE IF EXISTS public.producto;
+
+CREATE TABLE IF NOT EXISTS public.producto
+(
+    nombre character varying(100) COLLATE pg_catalog."default",
+    detalle character varying(100) COLLATE pg_catalog."default",
+    codigo integer,
+    precio integer,
+    proveedor character varying COLLATE pg_catalog."default",
+    id integer NOT NULL,
+    CONSTRAINT producto_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.producto
+    OWNER to admin;
+    
+    
+
+    
+    
+    
+-- Table: public.proveedor
+
+-- DROP TABLE IF EXISTS public.proveedor;
+
+CREATE TABLE IF NOT EXISTS public.proveedor
+(
+    nombre character varying COLLATE pg_catalog."default",
+    detalle character varying COLLATE pg_catalog."default",
+    rfc character varying COLLATE pg_catalog."default",
+    telefono integer,
+    id integer NOT NULL,
+    CONSTRAINT proveedor_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.proveedor
+    OWNER to admin;
+    
+    
