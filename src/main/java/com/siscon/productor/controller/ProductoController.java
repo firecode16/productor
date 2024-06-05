@@ -1,7 +1,5 @@
 package com.siscon.productor.controller;
 
-import java.util.HashMap;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,16 +24,7 @@ public class ProductoController {
 	private ProductoService productoService;
 
 	@PostMapping("api/insertProdcut")
-	public ResponseObj insertProdcut(@RequestBody HashMap<String, Object> map) {
-		Producto product = new Producto();
-
-		product.setId((Integer) map.get("id"));
-		product.setNombre((String) map.get("nombre"));
-		product.setDetalle((String) map.get("detalle"));
-		product.setCodigo((Integer) map.get("codigo"));
-		product.setPrecio((Integer) map.get("precio"));
-		product.setProveedor((String) map.get("proveedor"));
-
+	public ResponseObj insertProdcut(@RequestBody Producto product) {
 		return new ResponseObj("OK", productoService.insertProduct(product));
 	}
 
